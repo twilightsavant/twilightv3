@@ -1,0 +1,22 @@
+{
+  "name": "twilight_v3",
+  "version": "1.0.0",
+  "description": "Twilight Savant Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Pat Merlino",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

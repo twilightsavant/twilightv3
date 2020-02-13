@@ -1,0 +1,103 @@
+.h_sec_2 {
+}
+
+.h_sec_2 .h2RollOver {
+  flex: 1;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 24px;
+}
+.h_sec_2 img {
+  display: block;
+}
+
+.h_sec_2 .designDiv {
+  background: url('./home_2_design.jpg'), url('./home_2_design_pix.jpg');
+  background-repeat: no-repeat, repeat;
+  background-position: left bottom, center;
+  background-size: contain;
+  padding-right: 40px;
+}
+
+.h_sec_2 .fullstack {
+  width: 100%;
+  position: relative;
+  background: url('./home_2_fullstack.jpg'), url('./home_2_fullstack_pix.jpg');
+  background-repeat: no-repeat, repeat;
+  background-position: right bottom, center;
+  background-size: contain;
+  padding-left: 40px;
+}
+
+.h_sec_2 .resume {
+  width: 100%;
+  position: relative;
+  background: url('./home_2_resume.jpg'), url('./home_2_resume_pix.jpg');
+  background-repeat: no-repeat, repeat;
+  background-position: right bottom, center;
+  background-size: contain;
+  padding-left: 40px;
+  border-bottom: 1px solid black;
+}
+
+.h2RollOver:hover .image {
+  opacity: 0.3;
+}
+.h2RollOver .rollOverTxt {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  transition-duration: 1s;
+  align-self: center;
+}
+.h2RollOver:hover .rollOverTxt {
+  position: relative;
+  top: 0px;
+  opacity: 1;
+  transition-duration: 0.5s;
+  align-self: center;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .h_sec_2 {
+    background: url('./home_2_design_pix.jpg');
+    background-repeat: repeat;
+
+    border-bottom: 1px solid black;
+  }
+  .h_sec_2 .flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .h_sec_2 .h2RollOver {
+    height: 110px;
+    font-size: 20px;
+    border: none;
+  }
+  .h_sec_2 .resume::after {
+    content: '';
+    position: absolute;
+    background: url('./home_2_resume_pix.jpg');
+    left: 100%;
+    top: 0;
+    width: 1000px;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .h_sec_2 .h2RollOver {
+    height: 180px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .h_sec_2 .h2RollOver {
+    height: 236px;
+  }
+}

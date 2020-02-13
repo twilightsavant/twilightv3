@@ -1,0 +1,99 @@
+.headerPlaceHolder,
+header {
+  height: 60px;
+}
+header {
+  background: white;
+  border-bottom: 1px solid black;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+}
+header .navBar {
+  display: flex;
+  justify-content: space-between;
+}
+header .drawerNav {
+  display: block;
+  align-self: center;
+  padding-top: 10px;
+}
+
+header .logo {
+  flex: 1;
+  padding-top: 10px;
+}
+header .logo img {
+  max-width: 100%;
+  height: auto;
+  max-width: 265px;
+}
+
+header .l_links {
+  display: none;
+}
+
+header .l_links {
+  flex: 1;
+  padding-top: 34px;
+  text-align: right;
+}
+
+header .l_links ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+header .l_links li {
+  padding-left: 20px;
+  display: inline;
+}
+header .l_links li a {
+  text-decoration: none;
+}
+header .l_links li a:active,
+header .l_links li a:hover {
+  text-decoration: underline;
+}
+
+header .l_links .loginbtn {
+  background: #a8deff;
+  padding: 2px;
+}
+header .l_links button {
+  background: #67acbc;
+  color: white;
+  padding: 0px 30px;
+  height: 30px;
+  border: 0px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  .headerPlaceHolder,
+  header {
+    height: 84px;
+  }
+  header .l_links {
+    display: block;
+  }
+  header .drawerNav {
+    display: none;
+  }
+  header .logo {
+    padding-top: 8px;
+  }
+  header .logo img {
+    width: 100%;
+    height: auto;
+    max-width: 404px;
+  }
+}
+@media (min-width: 1200px) {
+}
