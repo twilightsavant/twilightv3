@@ -26,17 +26,17 @@ const Navbar = props => {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/' className='color_main'>
+                  <Link to='/fullstack' className='color_main'>
                     FULLSTACK
                   </Link>
                 </li>
                 <li>
-                  <Link to='/' className='color_main'>
+                  <Link to='/design' className='color_main'>
                     DESIGN
                   </Link>
                 </li>
                 <li>
-                  <Link to='/' className='color_main'>
+                  <Link to='/resume' className='color_main'>
                     RESUME / CONTACT
                   </Link>
                 </li>

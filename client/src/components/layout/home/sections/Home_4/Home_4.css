@@ -1,0 +1,46 @@
+.h_sec_3 .portGallery {
+  flex-wrap: wrap;
+  text-align: center;
+}
+.h_sec_3 span,
+.h_sec_3 a {
+  flex: 0 0 1;
+  margin-bottom: 30px;
+}
+.h_sec_3 .portGallery img {
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 576px) {
+  .h_sec_3 .portGallery {
+    display: flex;
+    justify-content: space-between;
+  }
+  .h_sec_3 span,
+  .h_sec_3 a {
+    flex: 0 0 40%;
+  }
+}
+@media (min-width: 768px) {
+  .h_sec_3 .portGallery {
+    display: flex;
+    justify-content: space-between;
+  }
+  .h_sec_3 span,
+  .h_sec_3 a {
+    flex: 0 0 30%;
+    width: unset;
+    height: unset;
+  }
+}
+@media (min-width: 992px) {
+  .h_sec_3 span,
+  .h_sec_3 a {
+    flex: 0 0 23%;
+  }
+}
+@media (min-width: 1200px) {
+}

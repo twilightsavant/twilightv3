@@ -5,9 +5,12 @@ import './App.css';
 import Navbar from './components/layout/navbar/Navbar';
 import Backdrop from './components/Backdrop/Backdrop';
 import SideDrawer from './components/SideDrawer/SideDrawer';
+import Footer from './components/layout/footer/Footer';
 
 //Route Imports
 import Home from './components/layout/home/Home';
+import Fullstack from './components/layout/fullstack/Fullstack';
+import Resume from './components/layout/resume/Resume';
 
 function App() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
@@ -37,7 +40,10 @@ function App() {
         <Navbar click={toggleDrawerClickHandler} />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route path='/fullstack' component={Fullstack} />
+          <Route path='/resume' component={Resume} />
         </Switch>
+        <Footer />
       </Fragment>
     </Router>
   );

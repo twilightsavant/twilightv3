@@ -1,0 +1,54 @@
+.f_projTile {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}
+.f_projTile .imgDiv {
+}
+.f_projTile .content {
+  flex: 1;
+  margin-left: 50px;
+  align-self: center;
+}
+.f_projTile .imgDiv .sitePic {
+  max-width: 200px;
+  border: 1px solid black;
+  display: block;
+}
+/* Control the drop shadows */
+.f_projTile .imgShadow {
+  padding-top: 10px;
+  max-width: 200px;
+}
+.f_projTile .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.f_projTile .langs {
+  margin-bottom: 30px;
+}
+.f_projTile .desc {
+  margin-bottom: 30px;
+}
+
+.f_projTile button {
+  border-radius: 15px;
+  border: none;
+  padding: 7px 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  background: #666666;
+  color: white;
+  font-weight: bold;
+}
+.f_projTile button a,
+.f_projTile button a:visited {
+  color: white;
+  text-decoration: none;
+}
+.f_projTile button a:hover,
+.f_projTile button a:active {
+  color: white;
+  text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+.modalImg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.modalImg .content {
+  align-self: center;
+  flex: 0 0 80%;
+  text-align: center;
+}
+
+.modalImg .content img {
+  max-width: 50%;
+  border: 10px solid white;
+  border-bottom: 30px solid white;
+}
+
+.modalImg .imgDesc {
+  position: relative;
+  top: -25px;
+}

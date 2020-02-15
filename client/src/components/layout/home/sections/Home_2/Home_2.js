@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './Home_2.css';
-import home_2_1 from './home_2_1.jpg';
 
 const Home_2 = props => {
   let history = useHistory();

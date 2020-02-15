@@ -1,5 +1,5 @@
 import React from 'react';
-import bottomShadowImg from './BottomShadow.jpg';
+import bottomShadowImg from './BottomShadow.png';
 import './BottomShadow.css';
 
 const BottomShadow = props => {

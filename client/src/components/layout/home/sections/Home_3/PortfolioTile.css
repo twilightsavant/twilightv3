@@ -1,0 +1,51 @@
+.portTile {
+  flex: 0 0 48%;
+  margin-bottom: 30px;
+}
+.portTileBG {
+  border: 1px solid black;
+  height: 132px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.portTile .portLogo {
+  flex: 1;
+  display: flex;
+}
+.portTile .portLogo div {
+  align-self: center;
+  padding-left: 20px;
+}
+.portTile .portBtns {
+  justify-self: end;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.portTile button {
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  background: #ededed;
+}
+
+.portTile button a,
+.portTile button a:visited {
+  text-decoration: none;
+  color: black;
+}
+.portTile button a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

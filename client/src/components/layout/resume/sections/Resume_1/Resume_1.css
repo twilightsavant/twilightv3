@@ -1,0 +1,88 @@
+.r_sec_1 {
+  width: 100%;
+  background-image: url('./resume_1_bgPix.jpg');
+  background-repeat: repeat;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+.r_sec_1 .bgDiv {
+  height: 100%;
+  background-image: url('./resume_1_bgPic.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto 350px;
+  padding-top: 350px;
+}
+
+.r_sec_1 .content {
+  text-align: center;
+  background: #666666;
+  color: white;
+  padding: 45px 0px;
+  border: 1px solid black;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+.r_sec_1 h1 {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 21px;
+}
+
+.r_sec_1 h2 {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 24px;
+}
+
+.r_sec_1 h3 {
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 26px;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .r_sec_1 {
+    height: 310px;
+  }
+  .r_sec_1 .bgDiv {
+    background-size: auto 310px;
+    display: flex;
+    justify-content: right;
+    padding-top: 0px;
+    background-position: bottom left;
+  }
+
+  .r_sec_1 .content {
+    text-align: right;
+    align-self: center;
+    justify-self: right;
+    background: none;
+    color: black;
+    padding: 0px;
+    border: none;
+  }
+}
+@media (min-width: 992px) {
+  .r_sec_1 {
+    height: 320px;
+  }
+  .r_sec_1 .bgDiv {
+    background-size: auto 320px;
+  }
+}
+@media (min-width: 1200px) {
+  .r_sec_1 {
+    height: 320px;
+  }
+  .r_sec_1 .bgDiv {
+    background-size: auto;
+  }
+}

@@ -16,11 +16,11 @@ const Home_1 = props => {
           <h4>Full Stack Developer</h4>
           <h3 className='font26'>Patrick Merlino</h3>
 
-          <btn className='rndBtn'>
+          <button className='rndBtn'>
             <Link to='/resume' className='color_yellow nounderline'>
               Get Your Project Started
             </Link>
-          </btn>
+          </button>
         </div>
       </div>
     </section>

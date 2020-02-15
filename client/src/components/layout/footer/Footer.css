@@ -1,0 +1,66 @@
+footer {
+  background: url('./footer_bgBar.png'), url('./footer_bgPix.png');
+  background-repeat: repeat-x, repeat;
+  margin-top: 4px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+footer .footerBG {
+  background: url('./footer_twilightFaint.png');
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: auto;
+  height: 100%;
+}
+footer .centerContainer {
+  height: 100%;
+  background: url('./footer_dog.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+footer .content {
+  text-align: center;
+  padding-top: 100px;
+  font-weight: bold;
+  line-height: 25px;
+  padding-bottom: 350px;
+}
+footer .content a,
+footer .content a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+footer .content a:hover,
+footer .content a:active {
+  text-decoration: underline;
+  color: black;
+}
+
+footer .content img {
+  margin-bottom: 30px;
+}
+footer .content button {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  footer .centerContainer {
+    display: flex;
+    background-position: bottom right;
+  }
+  footer .content {
+    align-self: center;
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+  footer {
+    height: 370px;
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

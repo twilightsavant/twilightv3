@@ -1,0 +1,72 @@
+.r_sec_2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.r_sec_2 .name {
+  padding-right: 5px;
+}
+
+.r_sec_2 .r_flexBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+
+.r_sec_2 .r_flex {
+  padding-bottom: 20px;
+}
+
+.r_sec_2 .r_flex:nth-child(1) {
+  flex: 80%;
+}
+.r_sec_2 .r_flex:nth-child(2) {
+  flex: 80%;
+}
+.r_sec_2 .r_flex:nth-child(3) {
+  flex: 80%;
+}
+
+.r_sec_2 .r_flex ul {
+  list-style: none;
+  padding-left: 10px;
+  line-height: 20px;
+}
+.r_sec_2 .r_flex li {
+  margin-left: 0px;
+}
+.r_sec_2 .r_flex span {
+  font-weight: bold;
+  padding-right: 30px;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .r_sec_2 .r_flex:nth-child(1) {
+    flex: 45%;
+  }
+  .r_sec_2 .r_flex:nth-child(2) {
+    flex: 45%;
+  }
+  .r_sec_2 .r_flex:nth-child(3) {
+    flex: 1;
+    justify-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .r_sec_2 .r_flex:nth-child(1) {
+    flex: 40%;
+  }
+  .r_sec_2 .r_flex:nth-child(2) {
+    flex: 30%;
+  }
+  .r_sec_2 .r_flex:nth-child(3) {
+    flex: 30%;
+  }
+}
+@media (min-width: 1200px) {
+}
