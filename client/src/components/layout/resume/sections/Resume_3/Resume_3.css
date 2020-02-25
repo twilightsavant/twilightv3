@@ -1,4 +1,18 @@
 .r_sec_3 {
   background: #ebebeb;
   margin-bottom: 5px;
+  padding-bottom: 30px;
+}
+
+.r_sec_3 .contactCenter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.r_sec_3 .contactCol {
+  flex: 30%;
+  border-right: 1px solid black;
+  margin-right: 40px;
 }
