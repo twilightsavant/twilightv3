@@ -16,11 +16,9 @@ const Footer = props => {
               425.315.3743
             </button>
             <br />
-            <Link to='/fullstack'>Fullstack Developer</Link> |{' '}
-            <Link to='/fullstack'>Graphic Designer</Link>
+            <Link to='/'>Home</Link> | <Link to='/fullstack'>Fullstack</Link>
             <br />
-            <Link to='/fullstack'>Industry Resume</Link> |{' '}
-            <Link to='/fullstack'>Contact Me</Link>
+            <Link to='/resume'>Industry Resume</Link>
           </div>
         </div>
       </div>

@@ -1,20 +1,38 @@
-import React from 'react';
-import './Full_2.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
+import './Full_2.css';
+import Spinner from '../../../spinner/Spinner';
 import FullStackProjectTile from '../../fullStackProjectTile/FullStackProjectTile';
 
+/*
 import imgTS from './ts.jpg';
 import imgMJ from './mj.jpg';
 import imgTS_2 from './ts_2.jpg';
+*/
 
 const Full_2 = props => {
-  const projects = populateProjects();
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  //const projects = populateProjects();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('api/projects/stack/mern');
+      setLoading(false);
+      setProjects(result.data);
+    };
+
+    fetchData(); //grab our projects from the server
+  }, [setProjects]);
 
   return (
     <section className='f_sec_2'>
       <div className='centerContainer'>
         <h1>MERN Stack Projects</h1>
-        {projects.length &&
+        {loading && <Spinner />}
+        {!loading &&
+          projects &&
           projects.map((proj, index) => {
             return <FullStackProjectTile key={index} proj={proj} />;
           })}
@@ -24,6 +42,7 @@ const Full_2 = props => {
 };
 
 /* Convert over to DB */
+/*
 const populateProjects = () => {
   let projects;
 
@@ -74,5 +93,6 @@ const populateProjects = () => {
 
   return projects;
 };
+*/
 
 export default Full_2;

@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+import ScrollToTop from './components/utils/ScrollToTop';
 import Navbar from './components/layout/navbar/Navbar';
 import Backdrop from './components/Backdrop/Backdrop';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -37,6 +38,7 @@ function App() {
       <Fragment>
         <SideDrawer show={sideDrawerOpen} click={backdropClickHandler} />
         {backdrop}
+        <ScrollToTop />
         <Navbar click={toggleDrawerClickHandler} />
         <Switch>
           <Route exact path='/' component={Home} />

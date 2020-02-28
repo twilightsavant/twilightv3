@@ -39,6 +39,7 @@ footer .content a:active {
 
 footer .content img {
   margin-bottom: 30px;
+  max-width: 100%;
 }
 footer .content button {
   margin-bottom: 20px;

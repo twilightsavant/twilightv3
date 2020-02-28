@@ -23,6 +23,7 @@
   border: 1px solid black;
   border-bottom: none;
   text-transform: uppercase;
+  flex: 1;
 }
 
 .r_sec_1 h1 {

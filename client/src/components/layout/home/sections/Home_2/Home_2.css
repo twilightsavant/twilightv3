@@ -46,8 +46,8 @@
 }
 .h2RollOver .rollOverTxt {
   position: relative;
-  top: 100px;
-  opacity: 0;
+  top: 0px;
+  opacity: 1;
   transition-duration: 1s;
   align-self: center;
 }
@@ -85,6 +85,10 @@
     top: 0;
     width: 1000px;
     height: 100%;
+  }
+  .h2RollOver .rollOverTxt {
+    top: 100px;
+    opacity: 0;
   }
 }
 @media (min-width: 992px) {

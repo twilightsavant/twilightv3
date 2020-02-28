@@ -1,24 +1,19 @@
 .f_projTile {
-  display: flex;
-  justify-content: space-evenly;
   padding-bottom: 40px;
 }
-.f_projTile .imgDiv {
-}
 .f_projTile .content {
-  flex: 1;
-  margin-left: 50px;
-  align-self: center;
+  text-align: center;
+  padding: 40px 0px;
 }
 .f_projTile .imgDiv .sitePic {
-  max-width: 200px;
+  max-width: 100%;
   border: 1px solid black;
   display: block;
 }
 /* Control the drop shadows */
 .f_projTile .imgShadow {
   padding-top: 10px;
-  max-width: 200px;
+  width: 100%;
 }
 .f_projTile .title {
   font-size: 24px;
@@ -51,4 +46,30 @@
 .f_projTile button a:active {
   color: white;
   text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .f_projTile {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .f_projTile .content {
+    flex: 1;
+    margin-left: 50px;
+    align-self: center;
+    padding: 0px;
+    text-align: left;
+  }
+  .f_projTile .imgDiv .sitePic {
+    max-width: 200px;
+  }
+  .f_projTile .imgShadow {
+    max-width: 200px;
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
 }

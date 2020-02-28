@@ -1,30 +1,27 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import ModalImg from '../../../../ModalImg/ModalImg';
+import Spinner from '../../../spinner/Spinner';
+import axios from 'axios';
 
 import './Home_4.css';
-import img_1 from './img_1.jpg';
-import img_2 from './img_2.jpg';
-import img_3 from './img_3.jpg';
-import img_4 from './img_4.jpg';
-import img_5 from './img_5.jpg';
-import img_6 from './img_6.jpg';
-import img_7 from './img_7.jpg';
-import img_8 from './img_8.jpg';
-
-import img_thumb1 from './img_thumb1.jpg';
-import img_thumb2 from './img_thumb2.jpg';
-import img_thumb3 from './img_thumb3.jpg';
-import img_thumb4 from './img_thumb4.jpg';
-import img_thumb5 from './img_thumb5.jpg';
-import img_thumb6 from './img_thumb6.jpg';
-import img_thumb7 from './img_thumb7.jpg';
-import img_thumb8 from './img_thumb8.jpg';
 
 const Home_4 = props => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProps, setModalProps] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [gallery, setGallery] = useState([]);
 
-  const gallery = loadGallery();
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('api/smallSites');
+      setLoading(false);
+      setGallery(result.data);
+    };
+
+    fetchData(); //grab our projects from the server
+  }, [setGallery]);
+
+  //const gallery = loadGallery();
   let modal;
 
   const backdropClickHandler = () => {
@@ -50,7 +47,9 @@ const Home_4 = props => {
         <div className='centerContainer'>
           <h1>Small Business Website Portfolio</h1>
           <div className='portGallery'>
-            {gallery.length > 0 &&
+            {loading && <Spinner />}
+            {!loading &&
+              gallery &&
               gallery.map((galItem, index) => {
                 if (galItem.link) {
                   return (
@@ -81,71 +80,6 @@ const Home_4 = props => {
       </section>
     </Fragment>
   );
-};
-
-/* CHANGE TO DB FED */
-
-const loadGallery = () => {
-  const gallery = [
-    {
-      key: 1,
-      thumbnail: img_thumb1,
-      imgFullPath: img_1,
-      imgTitle: 'Beer Candy',
-      link: 'http://client505.twwebdev.com'
-    },
-    {
-      key: 2,
-      thumbnail: img_thumb2,
-      imgFullPath: img_2,
-      imgTitle: 'Eastside Tattoo',
-      link: 'http://client293.twwebdev.com'
-    },
-    {
-      key: 3,
-      thumbnail: img_thumb3,
-      imgFullPath: img_3,
-      imgTitle: 'Corbett Automotive',
-      link: 'http://client140.twwebdev.com'
-    },
-    {
-      key: 4,
-      thumbnail: img_thumb4,
-      imgFullPath: img_4,
-      imgTitle: 'Fantasy Sports Fan',
-      link: 'http://client456.twwebdev.com'
-    },
-    {
-      key: 5,
-      thumbnail: img_thumb5,
-      imgFullPath: img_5,
-      imgTitle: 'Guns And Lace',
-      link: 'http://www.gunsandlace.com'
-    },
-    {
-      key: 6,
-      thumbnail: img_thumb6,
-      imgFullPath: img_6,
-      imgTitle: 'Isaksen Scale Models',
-      link: 'http://client336.twwebdev.com'
-    },
-    {
-      key: 7,
-      thumbnail: img_thumb7,
-      imgFullPath: img_7,
-      imgTitle: 'Isaksen Scale Models',
-      link: 'http://client485.twwebdev.com'
-    },
-    {
-      key: 8,
-      thumbnail: img_thumb8,
-      imgFullPath: img_8,
-      imgTitle: 'Isaksen Scale Models',
-      link: 'http://client192.twwebdev.com'
-    }
-  ];
-
-  return gallery;
 };
 
 Home_4.propTypes = {};

@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Full_3.css';
 
 import FullStackProjectTile from '../../fullStackProjectTile/FullStackProjectTile';
+import Spinner from '../../../spinner/Spinner';
 import BottomShadow from '../../../../BottomShadow/BottomShadow';
 
+/*
 import imgTS from '../Full_2/ts.jpg';
 import imgMJ from '../Full_2/mj.jpg';
 import imgTS_2 from '../Full_2/ts_2.jpg';
+*/
 
 const Full_3 = props => {
-  const projects = populateProjects();
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  //const projects = populateProjects();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('api/projects/stack/lamp');
+      setLoading(false);
+      setProjects(result.data);
+    };
+
+    fetchData(); //grab our projects from the server
+  }, [setProjects]);
 
   return (
     <section className='f_sec_3'>
       <BottomShadow />
       <div className='centerContainer'>
         <h1>LAMP Stack Projects</h1>
-        {projects.length &&
+        {loading && <Spinner />}
+        {!loading &&
+          projects &&
           projects.map((proj, index) => {
             return <FullStackProjectTile key={index} proj={proj} />;
           })}
@@ -26,6 +44,7 @@ const Full_3 = props => {
 };
 
 /* Convert over to DB */
+/*
 const populateProjects = () => {
   let projects;
 
@@ -76,5 +95,6 @@ const populateProjects = () => {
 
   return projects;
 };
+*/
 
 export default Full_3;

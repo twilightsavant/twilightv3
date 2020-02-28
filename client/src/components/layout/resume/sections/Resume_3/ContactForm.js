@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import Error from '../../../../Error';
+import Error from '../../../../utils/Error';
 import axios from 'axios';
 
 /* Import Styles */

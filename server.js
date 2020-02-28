@@ -1,9 +1,18 @@
 const express = require('express');
+const connectDB = require('./config/db.js');
 const path = require('path');
 
 const app = express();
 
-// API Routes here
+// Get the DB connected
+connectDB();
+
+// Init Middleware for authorized routes
+app.use(express.json({ extended: false }));
+
+// API Routes
+app.use('/api/projects', require('./routes/api/projects'));
+app.use('/api/smallSites', require('./routes/api/smallSites'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
